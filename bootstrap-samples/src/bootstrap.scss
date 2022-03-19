@@ -1,0 +1,34 @@
+@import "~bootstrap/scss/functions";
+
+// Override Bootstrap variables
+$primary: #13345a;
+$secondary: #2b6d51;
+$border-radius: 2rem;
+
+//https://getbootstrap.com/docs/5.1/components/buttons/#variables
+$input-btn-padding-y: 0.5rem;
+$input-btn-padding-x: 2rem;
+$input-btn-border-width: 2px;
+
+// Define custom variables
+$tertiary: rgb(194, 96, 40);
+
+
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+
+// Add custom variables to the $theme-colors map
+$custom-colors: (
+  'tertiary': $tertiary,
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import '~bootstrap/scss/bootstrap';
+
+
+/*.btn-outline-primary {
+  @include button-variant(#fff, $primary, $primary, #fff, $tertiary, $tertiary);
+}*/

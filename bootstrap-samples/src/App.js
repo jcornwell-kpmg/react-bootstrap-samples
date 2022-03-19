@@ -18,6 +18,14 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <section>
+        <button class="btn btn-outline-primary">Primary</button>
+
+        <button class="btn btn-outline-secondary">Secondary</button>
+
+        <button class="btn btn-outline-tertiary">Tertiary</button>
+      </section>
     </div>
   );
 }
