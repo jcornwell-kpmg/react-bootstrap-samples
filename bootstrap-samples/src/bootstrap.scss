@@ -2,32 +2,32 @@
 
 
 // Custom colors vars
-$teal: #00A3A1;
-$teal-lighter: #00A3A1CC;
+$teal: #008684;
+$teal-lighter: #008684CC;
 
-$blue: #005EB8;
-$blue-lighter: #005EB8B3;
+$blue: #2e6191;
+$blue-lighter: #2e6191B3;
 
-$dark-blue: #00338D;
-$dark-blue-lighter: #005EB8B3;
+$dark-blue: #0a224d;
+$dark-blue-lighter: #0a224dB3;
 
-$purple: #6D2077;
-$purple-lighter: #6D2077B3;
+$purple: #5a0e6d;
+$purple-lighter: #5a0e6dB3;
 
-$dark-purple: #470A68;
-$dark-purple-lighter: #470A68B3;
+$dark-purple: #2b093d;
+$dark-purple-lighter: #2b093dB3;
 
-$fuchsia: #C6007E;
-$fuchsia-lighter: #C6007EB3;
+$fuchsia: #9b0e67;
+$fuchsia-lighter: #9b0e67B3;
 
-$green: #009A44;
-$green-lighter: #009A44B3;
+$green: #077436;
+$green-lighter: #077436B3;
 
 
 $primary-hover: $blue-lighter;
 
-$tertiary: #F5F5F5;
-$tertiary-hover: #DCDCDC;
+$tertiary: #e9e9e9;
+$tertiary-hover: #d4d3d3;
 
 
 // Override Bootstrap variables
@@ -72,8 +72,8 @@ $tertiary-hover-border-color: $tertiary-hover;
 $dark-primary-bg: $white;
 $dark-primary-border-color: $white;
 $dark-primary-color: $black;
-$dark-primary-hover-bg: #FFFFFFE6;
-$dark-primary-hover-border-color: #FFFFFFCC;
+$dark-primary-hover-bg: #faf9f9e6;
+$dark-primary-hover-border-color: #f5f5f5cc;
 $dark-primary-hover-color: $black;
 
 $dark-secondary-bg: $black;
@@ -83,11 +83,11 @@ $dark-secondary-hover-bg: $black;
 $dark-secondary-hover-border-color: $white;
 $dark-secondary-hover-color: $white;
 
-$dark-tertiary-bg: #505050;
-$dark-tertiary-border-color: #505050;
+$dark-tertiary-bg: #8b8b8b;
+$dark-tertiary-border-color: #8b8b8b;
 $dark-tertiary-color: $white;
-$dark-tertiary-hover-bg: #888888;
-$dark-tertiary-hover-border-color: #888888;
+$dark-tertiary-hover-bg: #a8a8a8;
+$dark-tertiary-hover-border-color: #999999;
 $dark-tertiary-hover-color: $white;
 
 
