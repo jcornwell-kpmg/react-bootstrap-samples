@@ -1,9 +1,10 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
+      {/*
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,13 +19,22 @@ function App() {
           Learn React
         </a>
       </header>
+      */}
 
-      <section>
-        <button class="btn btn-outline-primary">Primary</button>
+      <section className="container">
+        <div className="row">
+          <div className="col-md-4 mt-3">
+            <button className="btn btn-primary">Primary</button>
+          </div>
 
-        <button class="btn btn-outline-secondary">Secondary</button>
+          <div className="col-md-4 mt-3">
+            <button className="btn btn-secondary">Secondary</button>
+          </div>
 
-        <button class="btn btn-outline-tertiary">Tertiary</button>
+          <div className="col-md-4 mt-3">
+            <button className="btn btn-tertiary">Tertiary</button>
+          </div>
+        </div>
       </section>
     </div>
   );

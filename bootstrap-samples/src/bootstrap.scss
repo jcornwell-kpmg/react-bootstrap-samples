@@ -1,17 +1,41 @@
 @import "~bootstrap/scss/functions";
 
 // Override Bootstrap variables
-$primary: #13345a;
-$secondary: #2b6d51;
+$primary: #00A3A1;
+$white: #ffffff;
 $border-radius: 2rem;
 
 //https://getbootstrap.com/docs/5.1/components/buttons/#variables
 $input-btn-padding-y: 0.5rem;
-$input-btn-padding-x: 2rem;
+$input-btn-padding-x: 3rem;
 $input-btn-border-width: 2px;
 
 // Define custom variables
-$tertiary: rgb(194, 96, 40);
+$tertiary: #DCDCDC;
+
+// Primary button colors
+$primary-bg: $primary;
+$primary-color: $white;
+$primary-border-color: $primary;
+$primary-hover-bg: rgba(0, 163, 161, 0.8);
+$primary-hover-color: $white;
+$primary-hover-border-color: $primary;
+
+// Secondary button colors
+$secondary-bg: $white;
+$secondary-color: $primary;
+$secondary-border-color: $primary;
+$secondary-hover-bg: $white;
+$secondary-hover-color: $primary;
+$secondary-hover-border-color: $primary;
+
+// Tertiary button colors
+$tertiary-bg: $tertiary;
+$tertiary-color: $primary;
+$tertiary-border-color: $tertiary;
+$tertiary-hover-bg: #D6D7D9;
+$tertiary-hover-color: $primary;
+$tertiary-hover-border-color: #D6D7D9;
 
 
 @import '~bootstrap/scss/variables';
@@ -28,7 +52,31 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import '~bootstrap/scss/bootstrap';
 
+.btn {
+  width: 214px;
+  height: 53px;
 
-/*.btn-outline-primary {
-  @include button-variant(#fff, $primary, $primary, #fff, $tertiary, $tertiary);
-}*/
+  &:hover {
+    transition: 200ms linear;
+  }
+}
+
+.btn-primary,
+.btn-outline-primary {
+  @include button-variant($primary-bg, $primary-border-color, $primary-color, $primary-hover-bg, $primary-hover-border-color, $primary-hover-color);
+}
+
+.btn-secondary,
+.btn-outline-secondary {
+  @include button-variant($secondary-bg, $secondary-border-color, $secondary-color, $secondary-hover-bg, $secondary-hover-border-color, $secondary-hover-color);
+
+  &:hover {
+    border-width: 0.25rem;
+    font-weight: 600;
+  }
+}
+
+.btn-tertiary,
+.btn-outline-tertiary {
+  @include button-variant($tertiary-bg, $tertiary-border-color, $tertiary-color, $tertiary-hover-bg, $tertiary-hover-border-color, $tertiary-hover-color);
+}
