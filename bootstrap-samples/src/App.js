@@ -23,16 +23,32 @@ function App() {
 
       <section className="container">
         <div className="row">
-          <div className="col-md-4 mt-3">
+          <div className="col-md-4 p-3 d-flex justify-content-center">
             <button className="btn btn-primary">Primary</button>
           </div>
 
-          <div className="col-md-4 mt-3">
+          <div className="col-md-4 p-3 d-flex justify-content-center">
             <button className="btn btn-secondary">Secondary</button>
           </div>
 
-          <div className="col-md-4 mt-3">
+          <div className="col-md-4 p-3 d-flex justify-content-center">
             <button className="btn btn-tertiary">Tertiary</button>
+          </div>
+        </div>
+      </section>
+
+      <section className="container bg-dark mt-3 rounded-3">
+        <div className="row">
+          <div className="col-md-4 p-3 d-flex justify-content-center">
+            <button className="btn btn-primary-dark">Primary</button>
+          </div>
+
+          <div className="col-md-4 p-3 d-flex justify-content-center">
+            <button className="btn btn-secondary-dark">Secondary</button>
+          </div>
+
+          <div className="col-md-4 p-3 d-flex justify-content-center">
+            <button className="btn btn-tertiary-dark">Tertiary</button>
           </div>
         </div>
       </section>

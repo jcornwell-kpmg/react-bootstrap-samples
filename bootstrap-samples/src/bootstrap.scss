@@ -1,27 +1,58 @@
 @import "~bootstrap/scss/functions";
 
+
+// Custom colors vars
+$teal: #00A3A1;
+$teal-lighter: #00A3A1CC;
+
+$blue: #005EB8;
+$blue-lighter: #005EB8B3;
+
+$dark-blue: #00338D;
+$dark-blue-lighter: #005EB8B3;
+
+$purple: #6D2077;
+$purple-lighter: #6D2077B3;
+
+$dark-purple: #470A68;
+$dark-purple-lighter: #470A68B3;
+
+$fuchsia: #C6007E;
+$fuchsia-lighter: #C6007EB3;
+
+$green: #009A44;
+$green-lighter: #009A44B3;
+
+
+$primary-hover: $blue-lighter;
+
+$tertiary: #F5F5F5;
+$tertiary-hover: #DCDCDC;
+
+
 // Override Bootstrap variables
-$primary: #00A3A1;
-$white: #ffffff;
-$border-radius: 2rem;
+$primary: $blue;
+
+$black: #000000;
+$white: #FFFFFF;
+
 
 //https://getbootstrap.com/docs/5.1/components/buttons/#variables
 $input-btn-padding-y: 0.5rem;
 $input-btn-padding-x: 3rem;
-$input-btn-border-width: 2px;
+$input-btn-border-width: 0.1875rem; // 3px
+$btn-border-radius: 2rem;
 
-// Define custom variables
-$tertiary: #DCDCDC;
 
-// Primary button colors
+// Custom primary button colors
 $primary-bg: $primary;
-$primary-color: $white;
 $primary-border-color: $primary;
-$primary-hover-bg: rgba(0, 163, 161, 0.8);
-$primary-hover-color: $white;
+$primary-color: $white;
+$primary-hover-bg: $primary-hover;
 $primary-hover-border-color: $primary;
+$primary-hover-color: $white;
 
-// Secondary button colors
+// Custom secondary button colors
 $secondary-bg: $white;
 $secondary-color: $primary;
 $secondary-border-color: $primary;
@@ -29,13 +60,35 @@ $secondary-hover-bg: $white;
 $secondary-hover-color: $primary;
 $secondary-hover-border-color: $primary;
 
-// Tertiary button colors
+// Custom tertiary button colors
 $tertiary-bg: $tertiary;
 $tertiary-color: $primary;
 $tertiary-border-color: $tertiary;
-$tertiary-hover-bg: #D6D7D9;
+$tertiary-hover-bg: $tertiary-hover;
 $tertiary-hover-color: $primary;
-$tertiary-hover-border-color: #D6D7D9;
+$tertiary-hover-border-color: $tertiary-hover;
+
+// Custom dark primary, secondary, and tertiary button color vars
+$dark-primary-bg: $white;
+$dark-primary-border-color: $white;
+$dark-primary-color: $black;
+$dark-primary-hover-bg: #FFFFFFE6;
+$dark-primary-hover-border-color: #FFFFFFCC;
+$dark-primary-hover-color: $black;
+
+$dark-secondary-bg: $black;
+$dark-secondary-border-color: $white;
+$dark-secondary-color: $white;
+$dark-secondary-hover-bg: $black;
+$dark-secondary-hover-border-color: $white;
+$dark-secondary-hover-color: $white;
+
+$dark-tertiary-bg: #505050;
+$dark-tertiary-border-color: #505050;
+$dark-tertiary-color: $white;
+$dark-tertiary-hover-bg: #888888;
+$dark-tertiary-hover-border-color: #888888;
+$dark-tertiary-hover-color: $white;
 
 
 @import '~bootstrap/scss/variables';
@@ -53,30 +106,59 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import '~bootstrap/scss/bootstrap';
 
 .btn {
-  width: 214px;
-  height: 53px;
+  min-width: 214px; // Specific width and height set to account for secondary button that has varying border thickness between normal and hover states.
+  min-height: 53px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem; // 0.8px
+  text-transform: capitalize;
+  border-width: 0.1875rem; // 3px
 
   &:hover {
-    transition: 200ms linear;
+    transition: 150ms linear;
   }
 }
 
+// Primary button
 .btn-primary,
 .btn-outline-primary {
   @include button-variant($primary-bg, $primary-border-color, $primary-color, $primary-hover-bg, $primary-hover-border-color, $primary-hover-color);
 }
 
+// Secondary button
 .btn-secondary,
 .btn-outline-secondary {
   @include button-variant($secondary-bg, $secondary-border-color, $secondary-color, $secondary-hover-bg, $secondary-hover-border-color, $secondary-hover-color);
 
   &:hover {
-    border-width: 0.25rem;
-    font-weight: 600;
+    border-width: 0.3125rem; // 5px
+    font-weight: 700;
   }
 }
 
+// Tertiary button
 .btn-tertiary,
 .btn-outline-tertiary {
   @include button-variant($tertiary-bg, $tertiary-border-color, $tertiary-color, $tertiary-hover-bg, $tertiary-hover-border-color, $tertiary-hover-color);
+}
+
+
+// Primary button - Dark
+.btn-primary-dark {
+  @include button-variant($dark-primary-bg, $dark-primary-border-color, $dark-primary-color, $dark-primary-hover-bg, $dark-primary-hover-border-color, $dark-primary-hover-color);
+}
+
+// Secondary button - Dark
+.btn-secondary-dark {
+  @include button-variant($dark-secondary-bg, $dark-secondary-border-color, $dark-secondary-color, $dark-secondary-hover-bg, $dark-secondary-hover-border-color, $dark-secondary-hover-color);
+
+  &:hover {
+    border-width: 0.3125rem; // 5px
+    font-weight: 700;
+  }
+}
+
+// Tertiary button - Dark
+.btn-tertiary-dark {
+  @include button-variant($dark-tertiary-bg, $dark-tertiary-border-color, $dark-tertiary-color, $dark-tertiary-hover-bg, $dark-tertiary-hover-border-color, $dark-tertiary-hover-color);
 }
